@@ -33,9 +33,7 @@ class TeacherProfileService:
                 {"name": "Math Workshop", "engagement": 92}
             ],
             "student_trends": [
-                {"name": "Priya", "change": 15, "status": "improved"},
-                {"name": "Kumar", "change": 8, "status": "improved"},
-                {"name": "Asha", "change": -5, "status": "declining"}
+                {"name": "Pranav", "change": 15, "status": "improved"}
             ],
             "strengths": [
                 "High engagement sessions (85%+)",

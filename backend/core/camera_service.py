@@ -53,7 +53,7 @@ class CameraService:
         return self._generate_simulated_frame()
 
     def _generate_simulated_frame(self):
-        """Generates a realistic classroom camera feed with 2 simulated students for testing."""
+        """Generates a realistic classroom camera feed with 1 simulated student for testing."""
         self._sim_tick += 1
         frame = np.full((480, 640, 3), 35, dtype=np.uint8)
 
@@ -63,16 +63,10 @@ class CameraService:
         cv2.putText(frame, f"Frame: {self._sim_tick}", (20, 65),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (180, 180, 180), 1)
 
-        # Draw Student 1 (Priya)
-        p1_x = 160 + int(10 * math.sin(self._sim_tick * 0.05))
+        # Draw Student 1 (Pranav)
+        p1_x = 320 + int(10 * math.sin(self._sim_tick * 0.05))
         p1_y = 230
         cv2.circle(frame, (p1_x, p1_y), 50, (120, 160, 200), -1)
         cv2.ellipse(frame, (p1_x, p1_y + 90), (70, 50), 0, 0, 180, (80, 100, 150), -1)
-
-        # Draw Student 2 (Kumar)
-        p2_x = 450 + int(15 * math.cos(self._sim_tick * 0.04))
-        p2_y = 240
-        cv2.circle(frame, (p2_x, p2_y), 50, (180, 140, 120), -1)
-        cv2.ellipse(frame, (p2_x, p2_y + 90), (70, 50), 0, 0, 180, (120, 80, 100), -1)
 
         return frame

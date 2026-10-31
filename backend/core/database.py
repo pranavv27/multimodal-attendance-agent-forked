@@ -75,9 +75,7 @@ def init_db():
 
             # Sample students
             students = [
-                ("S101", "Priya Sharma", 88.0, 920.0, "Present"),
-                ("S102", "Kumar Verma", 82.5, 870.0, "Present"),
-                ("S103", "Asha Patel", 74.0, 450.0, "Present")
+                ("S101", "Pranav Ghodki", 88.0, 920.0, "Present")
             ]
             for s_id, s_name, att, dur, status in students:
                 rec = AttendanceRecord(

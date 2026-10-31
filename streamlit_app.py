@@ -121,17 +121,14 @@ if page == "🔴 Live Session Monitor":
         st.subheader("⚠️ Real-Time Alerts")
         st.markdown("""
         <div class="alert-box">
-            <strong>ℹ️ Student S101 (Priya)</strong>: Attentive (88% attention).<br>
-            <strong>ℹ️ Student S102 (Kumar)</strong>: Attentive (85% attention).<br>
+            <strong>ℹ️ Student S101 (Pranav)</strong>: Attentive (88% attention).<br>
             <strong>✨ Acoustic Environment</strong>: Clear, no disruptive noise.
         </div>
         """, unsafe_allow_html=True)
 
         st.subheader("📋 Presence-Based Attendance Log")
         attendance_df = pd.DataFrame([
-            {"ID": "S101", "Student": "Priya Sharma", "Duration": "920s", "Status": "Present ✅"},
-            {"ID": "S102", "Student": "Kumar Verma", "Duration": "870s", "Status": "Present ✅"},
-            {"ID": "S103", "Student": "Asha Patel", "Duration": "450s", "Status": "In Progress ⏳"}
+            {"ID": "S101", "Student": "Pranav Ghodki", "Duration": "920s", "Status": "Present ✅"}
         ])
         st.dataframe(attendance_df, use_container_width=True)
 
@@ -172,9 +169,7 @@ elif page == "👨‍🏫 Teacher Central":
 
     st.subheader("👥 Student Individual Trends")
     student_trends_df = pd.DataFrame([
-        {"Student": "Priya Sharma", "Engagement Change": "+15%", "Status": "Improved 🚀"},
-        {"Student": "Kumar Verma", "Engagement Change": "+8%", "Status": "Improved 🚀"},
-        {"Student": "Asha Patel", "Engagement Change": "-5%", "Status": "Declining ⚠️"}
+        {"Student": "Pranav Ghodki", "Engagement Change": "+15%", "Status": "Improved 🚀"}
     ])
     st.table(student_trends_df)
 

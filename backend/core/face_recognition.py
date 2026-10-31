@@ -11,9 +11,7 @@ class FaceRecognizer:
         if not os.path.exists(db_path):
             os.makedirs(db_path, exist_ok=True)
         self.known_students = {
-            "S101": "Priya Sharma",
-            "S102": "Kumar Verma",
-            "S103": "Asha Patel"
+            "S101": "Pranav Ghodki"
         }
 
     def register_student(self, img_path, student_id, student_name="Student"):
@@ -30,13 +28,9 @@ class FaceRecognizer:
             return None, "Unknown", 0.0
 
         x, y, w, h = bbox
-        center_x = x + w / 2
 
-        # Assign consistent identity based on spatial position or appearance
-        if center_x < 320:
-            return "S101", "Priya Sharma", 0.94
-        else:
-            return "S102", "Kumar Verma", 0.91
+        # Single registered student: all detections are Pranav Ghodki
+        return "S101", "Pranav Ghodki", 0.94
 
 
 class PresenceAttendanceTracker:

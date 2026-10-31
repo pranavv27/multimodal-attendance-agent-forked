@@ -98,9 +98,7 @@ class AnalyticsService:
                     last = r.last_seen.strftime("%H:%M:%S") if r.last_seen else "N/A"
                     writer.writerow([r.student_id, r.student_name, first, last, r.duration_seconds, r.status])
             else:
-                writer.writerow(["S101", "Priya Sharma", "09:00:15", "09:45:20", "2705", "Present"])
-                writer.writerow(["S102", "Kumar Verma", "09:02:10", "09:45:20", "2590", "Present"])
-                writer.writerow(["S103", "Asha Patel", "09:15:00", "09:45:20", "1820", "Present"])
+                writer.writerow(["S101", "Pranav Ghodki", "09:00:15", "09:45:20", "2705", "Present"])
 
             return output.getvalue()
         finally:
